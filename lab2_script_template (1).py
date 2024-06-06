@@ -4,12 +4,12 @@ def main():
     about_me =  {'Full_name':'luckson paija',
                 'student_id':'10310712',
                 'Pizza_toppings':[
-                    'PEPERONI',
+                    'PEPPERONI',
                     'CHEESE',
                     'PINEAPPLE'
                 ],
                 'movies': [
-                    { 'title':'The Wolf of the wall street',
+                    { 'title':'The Wolf of the Wall Street',
                     'genre':'crime' },
                     { 'title':'Fast and Furious',
                     'genre':'Action' }
@@ -19,7 +19,8 @@ def main():
                 }
 
     # TODO: Step 3 - Add another movie to the data structure
-    about_me['movies'].append({'title':'Big Hero 6','genre':'animation'})
+    about_me['movies'].append({'title':'Big Hero 6',
+                            'genre':'animation'})
     
 # TODO: Step 4 - Function that prints student name and ID	
 def print_student_name_and_id(about_me):
@@ -33,7 +34,10 @@ def print_student_name_and_id(about_me):
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
 def add_pizza_toppings(about_me,toppings):
-        return
+    about_me.extend(toppings)
+    about_me.sort()
+    about_me=[topping.lower() for topping in about_me]
+    return about_me
 
 # TODO: Step 6 - Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
@@ -44,7 +48,7 @@ def print_pizza_toppings(about_me):
 
 # TODO: Step 7 - Function that prints comma-separated list of movie genres
 def print_movie_genres(about_me):
-  movie_genres =  return 
+  return 
 
 # TODO: Step 8 - Function that prints comma-separated list of movie titles
 def print_movie_titles(movie_list):
